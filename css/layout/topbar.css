@@ -23,13 +23,14 @@
 @media (min-width: 901px) { .topbar { min-height: 88px; } }
 /* Placeholder escuro e semibold, como no Figma */
 .topbar__search input::placeholder { color: var(--text); opacity: 1; font-weight: 500; }
-.topbar .icon-btn { background: var(--olive-100); border: 0; color: var(--olive-700); }
+.topbar .icon-btn { background: var(--olive-100); border: 0; color: var(--olive-accent); }
+.topbar .theme-toggle { width: 36px; height: 36px; align-self: center; }
 /* Bolinha vinho de 'há notificações' */
 .has-dot { position: relative; }
 .has-dot::after { content: ""; position: absolute; top: 11px; right: 12px; width: 7px; height: 7px; border-radius: 50%; background: var(--wine-800); }
 .topbar__divider { width: 1px; height: 32px; background: var(--line); }
 .topbar__actions { margin-left: auto; }
-.avatar--soft { background: var(--olive-200); color: var(--olive-700); }
+.avatar--soft { background: var(--olive-200); color: var(--olive-accent); }
 .topbar__user .avatar { width: 40px; height: 40px; }
 .avatar--soft .icon { width: 22px; height: 22px; }
 .topbar__user strong { font-size: .9rem; }

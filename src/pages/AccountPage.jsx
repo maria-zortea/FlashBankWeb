@@ -205,7 +205,7 @@ function AccountPage() {
                   <span className="icon icon--lg" data-icon="seguro" aria-hidden="true" />
                   Sua conta, do seu jeito
                 </h2>
-                <p className="muted">Controle suas notificações e o uso dos seus dados.</p>
+                <p className="muted">Personalize sua experiência e gerencie suas preferências.</p>
                 <a className="link card-link" href="#privacidade" onClick={notifyComingSoon}>
                   Gerenciar privacidade e preferências <span aria-hidden="true">↗</span>
                 </a>

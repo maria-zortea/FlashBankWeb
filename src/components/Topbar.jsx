@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Topbar({ userName, isMenuOpen, menuButtonRef, onMenuToggle, onNotify }) {
+function Topbar({ userName, isMenuOpen, menuButtonRef, onMenuToggle, onNotify, theme, onThemeToggle }) {
   const [query, setQuery] = useState('')
 
   function handleSearch(event) {
@@ -37,6 +37,23 @@ function Topbar({ userName, isMenuOpen, menuButtonRef, onMenuToggle, onNotify })
       </form>
 
       <div className="topbar__actions">
+        <button
+          className="icon-btn theme-toggle"
+          type="button"
+          aria-label={`Ativar modo ${theme === 'dark' ? 'claro' : 'escuro'}`}
+          title={`Ativar modo ${theme === 'dark' ? 'claro' : 'escuro'}`}
+          onClick={onThemeToggle}
+        >
+          {theme === 'dark' ? (
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+          ) : (
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z" />
+            </svg>
+          )}
+        </button>
         <button className="icon-btn" type="button" aria-label="Mensagens" onClick={() => onNotify('As mensagens chegam em breve.')}>
           <span className="icon" data-icon="mensagem2" aria-hidden="true" />
         </button>

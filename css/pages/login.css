@@ -27,14 +27,14 @@
 .saved-account { display: flex; justify-content: space-between; align-items: center; font-size: .8rem; color: var(--muted); }
 .saved-account b { font-weight: 500; margin-left: 4px; color: var(--text); }
 .login__form .field > label { font-weight: 700; font-size: .85rem; color: var(--text); }
-.login__form .field input { background: #fffffa; padding: 14px 14px; }
+.login__form .field input { background: var(--surface); padding: 14px 14px; }
 .icon-btn--soft { background: var(--olive-100); border: 0; width: 48px; padding: 0; display: grid; place-items: center; color: var(--text); }
 .login__form .form-error { min-height: 0; margin: -8px 0 -4px; }
 .forgot { align-self: flex-end; margin-top: 4px; }
 .btn--lg { padding: 14px 18px; font-size: .95rem; }
 .divider { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: .7rem; }
 .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-.login__form .btn--outline { color: var(--wine-800); background: #fffffa; }
+.login__form .btn--outline { color: var(--wine-800); background: var(--surface); }
 .login__note { display: flex; align-items: center; gap: 8px; font-size: .75rem; color: var(--muted); }
 .login__note .icon { width: 14px; height: 14px; }
 

@@ -2,6 +2,7 @@
 :root {
   /* Verde-oliva: cards de destaque e painel do login */
   --olive-700: #5b5e27;
+  --olive-accent: #5b5e27;
   --olive-300: #b9b98a;
   --olive-100: #edeed8;
   --olive-200: #d6d6b5;
@@ -19,6 +20,11 @@
   --muted: #5f5f4e; /* contraste AA sobre o fundo creme */
   --line: #ebebdd;
   --pos: #3f6b2a;
+  --wine-action: #5d0319;
+  --journey-bg: #e5e5d8;
+  --card-muted-bg: #e7e7d7;
+  --tabs-active-bg: #fffffa;
+  --chart-grid: #e3e3d0;
   /* Arredondamento dos cards e dos campos */
   --radius: 16px;
   --radius-sm: 10px;
@@ -26,4 +32,25 @@
   --sidebar-w: 232px;
   /* Fonte padrão (cai para a do sistema se não carregar) */
   --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --olive-100: #34382b;
+  --olive-200: #454936;
+  --olive-accent: #c6ce91;
+  --wine-800: #f0a1b1;
+  --wine-50: #442a31;
+  --cream: #171a18;
+  --sidebar-bg: #202421;
+  --surface: #252a26;
+  --text: #f0f0e8;
+  --muted: #b9bdaf;
+  --line: #3b423b;
+  --pos: #a5d18b;
+  --wine-action: #741b30;
+  --journey-bg: #2e342e;
+  --card-muted-bg: #303630;
+  --tabs-active-bg: #3a403a;
+  --chart-grid: #495047;
 }

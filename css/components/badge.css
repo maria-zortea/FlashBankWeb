@@ -2,7 +2,7 @@
 /* Selo arredondado (ex.: 'Conta ativa') */
 .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--olive-100); font-size: .72rem; font-weight: 600; }
 /* Aviso temporário no rodapé da tela (criado por format.js) */
-.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--white); padding: 10px 18px; border-radius: 999px; font-size: .85rem; z-index: 10; }
+.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--wine-action); color: var(--white); padding: 10px 18px; border-radius: 999px; font-size: .85rem; z-index: 10; }
 /* Texto 'Ambiente seguro' com ícone de escudo */
 .secure-note { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: .8rem; }
 .secure-note .icon { width: 16px; height: 16px; }

@@ -1,27 +1,27 @@
 /* Tela Investimentos: resumo, gráfico de linha, rosca da carteira e tabela. */
 .stat { display: flex; flex-direction: column; gap: 6px; padding: 22px 24px; }
 .stat strong { font-size: 1.9rem; font-weight: 500; letter-spacing: -.01em; }
-.stat--accent strong { color: var(--olive-700); }
-.card--muted { background: #e7e7d7; border-color: #e7e7d7; }
+.stat--accent strong { color: var(--olive-accent); }
+.card--muted { background: var(--card-muted-bg); border-color: var(--card-muted-bg); }
 .card__head > div small { display: block; margin-top: 2px; }
 
 /* Abas de período (controle segmentado) */
 .tabs { display: inline-flex; gap: 2px; padding: 3px; background: var(--olive-100); border-radius: 10px; }
 .tabs button { border: 0; background: transparent; border-radius: 8px; padding: 5px 12px; min-height: 28px; font-size: .72rem; color: var(--muted); }
-.tabs button[aria-pressed="true"] { background: #fffffa; color: var(--text); font-weight: 600; box-shadow: 0 1px 2px rgba(0, 0, 0, .1); }
+.tabs button[aria-pressed="true"] { background: var(--tabs-active-bg); color: var(--text); font-weight: 600; box-shadow: 0 1px 2px rgba(0, 0, 0, .1); }
 
 /* Gráfico de linha (SVG) */
 .chart svg { width: 100%; height: auto; display: block; }
 .chart text { fill: var(--muted); font-size: 11px; }
-.chart .grid-line { stroke: #e3e3d0; stroke-dasharray: 3 4; }
+.chart .grid-line { stroke: var(--chart-grid); stroke-dasharray: 3 4; }
 .chart .area { fill: var(--olive-700); opacity: .08; }
-.chart .line { fill: none; stroke: var(--olive-700); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
-.chart .dot { fill: var(--olive-700); }
+.chart .line { fill: none; stroke: var(--olive-accent); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.chart .dot { fill: var(--olive-accent); }
 
 /* Rosca: o fundo (conic-gradient) é montado pelo JS; o ::after cria o buraco do meio */
 .donut-wrap { display: flex; align-items: center; gap: 20px; }
 .donut { width: 140px; height: 140px; border-radius: 50%; position: relative; flex-shrink: 0; display: grid; place-items: center; }
-.donut::after { content: ""; position: absolute; inset: 23px; border-radius: 50%; background: var(--white); }
+.donut::after { content: ""; position: absolute; inset: 23px; border-radius: 50%; background: var(--surface); }
 .donut__center { position: relative; z-index: 1; text-align: center; display: flex; flex-direction: column; }
 .donut__center strong { font-size: 1.7rem; font-weight: 500; line-height: 1; }
 .legend { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }

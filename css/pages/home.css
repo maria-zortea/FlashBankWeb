@@ -27,7 +27,7 @@
 .flash__body { display: flex; align-items: center; gap: 16px; }
 .flash__card { width: 94px; height: 58px; border-radius: 10px; flex: none; }
 .flash__body p { font-size: .9375rem; }
-.flash__body small { color: var(--olive-700); font-size: .8125rem; }
+.flash__body small { color: var(--olive-accent); font-size: .8125rem; }
 .flash .link { font-size: .875rem; }
 
 /* Atalhos de ações rápidas */
@@ -44,25 +44,25 @@
 .tx { display: grid; grid-template-columns: 40px minmax(0, 150px) minmax(0, 1fr) auto; align-items: center; column-gap: 14px; padding: 8px 0; border-bottom: 1px solid var(--line); }
 .tx__icon { width: 40px; height: 40px; }
 /* Ícones sem arquivo próprio: quadradinho verde-claro com o ícone do menu dentro */
-.tx__icon--tile { display: grid; place-items: center; border-radius: 14px; background: var(--olive-100); color: var(--olive-700); }
+.tx__icon--tile { display: grid; place-items: center; border-radius: 14px; background: var(--olive-100); color: var(--olive-accent); }
 .tx__icon--tile .icon { width: 20px; height: 20px; }
 .tx__info strong { display: block; font-size: .9375rem; }
 .tx small { display: block; }
 .tx__cat { color: var(--muted); font-size: .8125rem; }
 .tx__valor { font-size: .9375rem; text-align: right; }
-.tx .pos { color: var(--olive-700); }
+.tx .pos { color: var(--olive-accent); }
 @media (max-width: 560px) {
   .tx { grid-template-columns: 40px minmax(0, 1fr) auto; grid-template-areas: "icone info valor" "icone cat valor"; }
   .tx__icon { grid-area: icone; } .tx__info { grid-area: info; } .tx__cat { grid-area: cat; } .tx__valor { grid-area: valor; }
 }
 
 /* Card 'Pequenos passos' */
-.card--journey { background: #e5e5d8; border-color: #e5e5d8; gap: 14px; }
+.card--journey { background: var(--journey-bg); border-color: var(--journey-bg); gap: 14px; }
 .card__head--top { align-items: flex-start; }
-.card--journey .icon { color: var(--olive-700); }
+.card--journey .icon { color: var(--olive-accent); }
 .journey__title { font-size: 1rem; font-weight: 600; }
 .journey__title span { display: block; }
-.journey__accent { margin-top: 10px; color: var(--olive-700); font-size: 1.375rem; font-weight: 400; }
+.journey__accent { margin-top: 10px; color: var(--olive-accent); font-size: 1.375rem; font-weight: 400; }
 /* Barrinhas de progresso: crescem da esquerda para a direita, alinhadas embaixo */
 .steps { display: flex; align-items: flex-end; gap: 6px; margin-top: 4px; }
 .steps span { flex: 1; height: 23px; border-radius: 5px; background: var(--olive-200); }

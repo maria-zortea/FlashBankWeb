@@ -12,12 +12,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* Contorno visível ao navegar pelo teclado (acessibilidade) */
 :focus-visible { outline: 2px solid var(--wine-800); outline-offset: 2px; }
 /* Link 'Ir para o conteúdo': escondido até receber foco com Tab */
-.skip-link { position: absolute; left: 8px; top: -60px; background: var(--wine-800); color: var(--white); padding: 10px 16px; border-radius: var(--radius-sm); z-index: 50; }
+.skip-link { position: absolute; left: 8px; top: -60px; background: var(--wine-action); color: var(--white); padding: 10px 16px; border-radius: var(--radius-sm); z-index: 50; }
 .skip-link:focus { top: 8px; }
 main:focus { outline: none; }
 /* Respeita quem desativou animações no sistema */
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
 /* Faixa de aviso quando a página é aberta sem servidor (file://) */
-.file-warning { margin: 0; padding: 12px 16px; background: var(--wine-800); color: var(--white); font-size: .9rem; position: relative; z-index: 60; }
+.file-warning { margin: 0; padding: 12px 16px; background: var(--wine-action); color: var(--white); font-size: .9rem; position: relative; z-index: 60; }
 /* O atributo hidden sempre vence o display definido nas classes */
 [hidden] { display: none !important; }

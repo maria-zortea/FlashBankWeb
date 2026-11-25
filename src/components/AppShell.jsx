@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { logout } from '../lib/auth.js'
+import { getActiveCpf, getAccountValue, setAccountValue } from '../lib/accounts.js'
+import { applyTheme } from '../lib/theme.js'
 import Sidebar from './Sidebar.jsx'
 import Topbar from './Topbar.jsx'
 import Toast from './Toast.jsx'
@@ -7,6 +9,7 @@ import Toast from './Toast.jsx'
 function AppShell({ activePage, userName, children, onNotify, notice }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [logoutDialogOpen, setLogoutDialogOpen] = useState(false)
+  const [theme, setTheme] = useState(() => getAccountValue('theme', 'light'))
   const menuButtonRef = useRef(null)
   const logoutButtonRef = useRef(null)
   const cancelLogoutRef = useRef(null)
@@ -15,6 +18,14 @@ function AppShell({ activePage, userName, children, onNotify, notice }) {
   const logoutDialogWasOpenRef = useRef(false)
 
   const closeLogoutDialog = () => setLogoutDialogOpen(false)
+
+  function toggleTheme() {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(nextTheme)
+    setAccountValue('theme', nextTheme, getActiveCpf())
+    applyTheme(nextTheme)
+    onNotify(`Modo ${nextTheme === 'dark' ? 'escuro' : 'claro'} ativado.`)
+  }
 
   function trapLogoutDialogFocus(event) {
     if (event.key === 'Escape') {
@@ -95,6 +106,8 @@ function AppShell({ activePage, userName, children, onNotify, notice }) {
         menuButtonRef={menuButtonRef}
         onMenuToggle={() => setMenuOpen((open) => !open)}
         onNotify={onNotify}
+        theme={theme}
+        onThemeToggle={toggleTheme}
       />
       {menuOpen && (
         <button

@@ -1,10 +1,11 @@
 /* Campos de formulário. */
 /* Rótulo acima do campo */
 .field { display: flex; flex-direction: column; gap: 6px; font-size: .8rem; }
-.field input { padding: 11px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--cream); }
+.field input, .field select { padding: 11px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--cream); color: var(--text); color-scheme: inherit; }
 /* Campo somente leitura em cinza (Minha conta fora da edição) */
 .field input:read-only { color: var(--muted); }
-.field input:not(:read-only) { background: var(--white); border-color: var(--olive-700); }
+.field input:not(:read-only), .field select { background: var(--surface); border-color: var(--olive-700); }
+.field select option { background: var(--surface); color: var(--text); }
 /* Campo + botão lado a lado (ex.: senha com olho) */
 .input-wrap { display: flex; gap: 8px; }
 .input-wrap input { flex: 1; }
